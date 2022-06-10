@@ -2,94 +2,48 @@ import { Link } from "react-router-dom";
 
 
 export default function SideBar() {
+  const avatarUrl = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.FjFkHghHK8HFQygVn_zzjwHaIQ%26pid%3DApi&f=1'
     return (
         <aside>
-        <div id="sidebar" class="nav-collapse ">
+        <div id="sidebar" className="nav-collapse ">
         
-          <ul class="sidebar-menu" id="nav-accordion">
-            <p class="centered"><a href="profile.html"><img alt="" src="img/ui-sam.jpg" class="img-circle" width="80" /></a></p>
-            <h5 class="centered">Sam Soffes</h5>
-            <li class="mt">
-              <Link class="active" to="index.html">
-                <i class="fa fa-dashboard"></i>
+          <ul className="sidebar-menu" id="nav-accordion">
+            <p className="centered"><a href="profile.html"><img alt="" src={avatarUrl} className="img-circle" width="80" /></a></p>
+            <h5 className="centered">Evgeni Kostadin</h5>
+            <li className="mt">
+              <Link className="active" to="/">
+                <i className="fa fa-dashboard"></i>
                 <span>Dashboard</span>
                 </Link>
             </li>
             <li>
-              <Link to="/">
-                <i class="fa fa-calendar"></i>
+              <Link to="/profile">
+                <i className="fa fa-user"></i>
+                <span>Profile</span>
+                </Link>
+            </li>
+            <li>
+              <Link to="/gallery">
+                <i className="fa fa-photo"></i>
+                <span>Gallery</span>
+                </Link>
+            </li>
+            <li>
+              <Link to="/calendar">
+                <i className="fa fa-calendar"></i>
                 <span>Calendar</span>
                 </Link>
             </li>
-
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class="fa fa-cogs"></i>
-                <span>Components</span>
-                </a>
-              <ul class="sub">
-                <li><a href="grids.html">Grids</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="todo_list.html">Todo List</a></li>
-                <li><a href="dropzone.html">Dropzone File Upload</a></li>
-                <li><a href="inline_editor.html">Inline Editor</a></li>
-                <li><a href="file_upload.html">Multiple File Upload</a></li>
-              </ul>
-            </li>
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class="fa fa-book"></i>
-                <span>Extra Pages</span>
-                </a>
-              <ul class="sub">
-                <li><a href="blank.html">Blank Page</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="lock_screen.html">Lock Screen</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="invoice.html">Invoice</a></li>
-                <li><a href="pricing_table.html">Pricing Table</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="404.html">404 Error</a></li>
-                <li><a href="500.html">500 Error</a></li>
-              </ul>
-            </li>
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class="fa fa-tasks"></i>
-                <span>Forms</span>
-                </a>
-              <ul class="sub">
-                <li><a href="form_component.html">Form Components</a></li>
-                <li><a href="advanced_form_components.html">Advanced Components</a></li>
-                <li><a href="form_validation.html">Form Validation</a></li>
-                <li><a href="contactform.html">Contact Form</a></li>
-              </ul>
-            </li>
-
             <li>
-              <a href="inbox.html">
-                <i class="fa fa-envelope"></i>
-                <span>Mail </span>
-                <span class="label label-theme pull-right mail-info">2</span>
-                </a>
-            </li>
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class=" fa fa-bar-chart-o"></i>
-                <span>Charts</span>
-                </a>
-              <ul class="sub">
-                <li><a href="morris.html">Morris</a></li>
-                <li><a href="chartjs.html">Chartjs</a></li>
-                <li><a href="flot_chart.html">Flot Charts</a></li>
-                <li><a href="xchart.html">xChart</a></li>
-              </ul>
+              <Link to="/todoList">
+                <i className="fa fa-check-circle-o"></i>
+                <span>ToDo</span>
+                </Link>
             </li>
 
             <li>
               <a href="google_maps.html">
-                <i class="fa fa-map-marker"></i>
+                <i className="fa fa-map-marker"></i>
                 <span>Google Maps </span>
                 </a>
             </li>
