@@ -1,94 +1,46 @@
-import { Chart } from "react-chartjs-2";
-
+import { Bar } from "react-chartjs-2";
+import BarChart from "../Charts/BarChart";
 
 export default function Home() {
 
 
-    function doughnutData() {
-        let doughnutData = [{
-        value: 70,
-        color: "/FF6B6B"
-        },
-        {
-        value: 30,
-        color: "/fdfdfd"
-        }
-        ];
-        let myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-        return myDoughnut
-    }
+    // function doughnutData() {
+    //     let doughnutData = [{
+    //     value: 70,
+    //     color: "/FF6B6B"
+    //     },
+    //     {
+    //     value: 30,
+    //     color: "/fdfdfd"
+    //     }
+    //     ];
+    //     let myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
+    //     return myDoughnut
+    // }
     return (
     
     <>      
       <section id="main-content">
-        <section class="wrapper">
-          <div class="row">
-            <div class="col-lg-9 main-chart">
+        <section className="wrapper">
+          <div className="row">
+            <div className="col-lg-9 main-chart">
+                
+              {BarChart()}
             
-              <div class="border-head">
-                <h3>USER VISITS</h3>
-              </div>
-              <div class="custom-bar-chart">
-                <ul class="y-axis">
-                  <li><span>10.000</span></li>
-                  <li><span>8.000</span></li>
-                  <li><span>6.000</span></li>
-                  <li><span>4.000</span></li>
-                  <li><span>2.000</span></li>
-                  <li><span>0</span></li>
-                </ul>
-                <div class="bar">
-                  <div class="title">JAN</div>
-                  <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
-                </div>
-                <div class="bar ">
-                  <div class="title">FEB</div>
-                  <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-                </div>
-                <div class="bar ">
-                  <div class="title">MAR</div>
-                  <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-                </div>
-                <div class="bar ">
-                  <div class="title">APR</div>
-                  <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-                </div>
-                <div class="bar">
-                  <div class="title">MAY</div>
-                  <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-                </div>
-                <div class="bar ">
-                  <div class="title">JUN</div>
-                  <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-                </div>
-                <div class="bar">
-                  <div class="title">JUL</div>
-                  <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-                </div>
-              </div>
-            
-              <div class="row mt">
+              <div className="row mt">
               
-                <div class="col-md-4 col-sm-4 mb">
-                  <div class="grey-panel pn donut-chart">
-                    <div class="grey-header">
+                <div className="col-md-4 col-sm-4 mb">
+                  <div className="grey-panel pn donut-chart">
+                    <div className="grey-header">
                       <h5>SERVER LOAD</h5>
                     </div>
                     <canvas id="serverstatus01" height="120" width="120"></canvas>
 
-
-
-
-
-
-
-
-
-                    <div class="row">
-                      <div class="col-sm-6 col-xs-6 goleft">
+                    <div className="row">
+                      <div className="col-sm-6 col-xs-6 goleft">
                         <p>Usage<br/>Increase:</p>
                       </div>
-                      <div class="col-sm-6 col-xs-6">
+                      <div className="col-sm-6 col-xs-6">
                         <h2>21%</h2>
                       </div>
                     </div>
@@ -96,9 +48,9 @@ export default function Home() {
                 
                 </div>
               
-                <div class="col-md-4 col-sm-4 mb">
-                  <div class="darkblue-panel pn">
-                    <div class="darkblue-header">
+                <div className="col-md-4 col-sm-4 mb">
+                  <div className="darkblue-panel pn">
+                    <div className="darkblue-header">
                       <h5>DROPBOX STATICS</h5>
                     </div>
                     <canvas id="serverstatus02" height="120" width="120"></canvas>
@@ -116,10 +68,10 @@ export default function Home() {
                 </script> */}
                     <p>April 17, 2014</p>
                     <footer>
-                      <div class="pull-left">
-                        <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
+                      <div className="pull-left">
+                        <h5><i className="fa fa-hdd-o"></i> 17 GB</h5>
                       </div>
-                      <div class="pull-right">
+                      <div className="pull-right">
                         <h5>60% Used</h5>
                       </div>
                     </footer>
@@ -127,53 +79,53 @@ export default function Home() {
                 
                 </div>
               
-                <div class="col-md-4 col-sm-4 mb">
+                <div className="col-md-4 col-sm-4 mb">
                 
-                  <div class="green-panel pn">
-                    <div class="green-header">
+                  <div className="green-panel pn">
+                    <div className="green-header">
                       <h5>REVENUE</h5>
                     </div>
-                    <div class="chart mt">
-                      <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="/fff" data-spot-color="/fff" data-fill-color="" data-highlight-line-color="/fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
+                    <div className="chart mt">
+                      <div className="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="/fff" data-spot-color="/fff" data-fill-color="" data-highlight-line-color="/fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
                     </div>
-                    <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
+                    <p className="mt"><b>$ 17,980</b><br/>Month Income</p>
                   </div>
                 </div>
               
               </div>
             
-              <div class="row">
+              <div className="row">
               
-                <div class="col-md-4 mb">
-                  <div class="weather pn">
-                    <i class="fa fa-cloud fa-4x"></i>
+                <div className="col-md-4 mb">
+                  <div className="weather pn">
+                    <i className="fa fa-cloud fa-4x"></i>
                     <h2>11º C</h2>
                     <h4>BUDAPEST</h4>
                   </div>
                 </div>
               
               
-                <div class="col-md-8 mb">
-                  <div class="message-p pn">
-                    <div class="message-header">
+                <div className="col-md-8 mb">
+                  <div className="message-p pn">
+                    <div className="message-header">
                       <h5>DIRECT MESSAGE</h5>
                     </div>
-                    <div class="row">
-                      <div class="col-md-3 centered hidden-sm hidden-xs">
-                        <img alt="" src="img/ui-danro.jpg" class="img-circle" width="65"/>
+                    <div className="row">
+                      <div className="col-md-3 centered hidden-sm hidden-xs">
+                        <img alt="" src="img/ui-danro.jpg" className="img-circle" width="65"/>
                       </div>
-                      <div class="col-md-9">
+                      <div className="col-md-9">
                         <p>
                           <name>Dan Rogers</name>
                           sent you a message.
                         </p>
-                        <p class="small">3 hours ago</p>
-                        <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                        <form class="form-inline">
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan"/>
+                        <p className="small">3 hours ago</p>
+                        <p className="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <form className="form-inline">
+                          <div className="form-group">
+                            <input type="text" className="form-control" id="exampleInputText" placeholder="Reply Dan"/>
                           </div>
-                          <button type="submit" class="btn btn-default">Send</button>
+                          <button type="submit" className="btn btn-default">Send</button>
                         </form>
                       </div>
                     </div>
@@ -182,81 +134,81 @@ export default function Home() {
                 </div>
               
               </div>
-              <div class="row">
+              <div className="row">
               
-                <div class="col-md-4 mb">
-                  <div class="twitter-panel pn">
-                    <i class="fa fa-twitter fa-4x"></i>
+                <div className="col-md-4 mb">
+                  <div className="twitter-panel pn">
+                    <i className="fa fa-twitter fa-4x"></i>
                     <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
-                    <p class="user">@Alvrz_is</p>
+                    <p className="user">@Alvrz_is</p>
                   </div>
                 </div>
               
-                <div class="col-md-4 mb">
+                <div className="col-md-4 mb">
                 
-                  <div class="white-panel pn">
-                    <div class="white-header">
+                  <div className="white-panel pn">
+                    <div className="white-header">
                       <h5>TOP USER</h5>
                     </div>
-                    <p><img alt="" src="img/ui-zac.jpg" class="img-circle" width="50"/></p>
+                    <p><img alt="" src="img/ui-zac.jpg" className="img-circle" width="50"/></p>
                     <p><b>Zac Snider</b></p>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <p class="small mt">MEMBER SINCE</p>
+                    <div className="row">
+                      <div className="col-md-6">
+                        <p className="small mt">MEMBER SINCE</p>
                         <p>2012</p>
                       </div>
-                      <div class="col-md-6">
-                        <p class="small mt">TOTAL SPEND</p>
+                      <div className="col-md-6">
+                        <p className="small mt">TOTAL SPEND</p>
                         <p>$ 47,60</p>
                       </div>
                     </div>
                   </div>
                 </div>
               
-                <div class="col-md-4 mb">
+                <div className="col-md-4 mb">
                 
-                  <div class="instagram-panel pn">
-                    <i class="fa fa-instagram fa-4x"></i>
+                  <div className="instagram-panel pn">
+                    <i className="fa fa-instagram fa-4x"></i>
                     <p>@THISISYOU<br/> 5 min. ago
                     </p>
-                    <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+                    <p><i className="fa fa-comment"></i> 18 | <i className="fa fa-heart"></i> 49</p>
                   </div>
                 </div>
               
               </div>
             
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                  <div class="product-panel-2 pn">
-                    <div class="badge badge-hot">HOT</div>
+              <div className="row">
+                <div className="col-lg-4 col-md-4 col-sm-4 mb">
+                  <div className="product-panel-2 pn">
+                    <div className="badge badge-hot">HOT</div>
                     <img src="img/product.jpg" width="200" alt=""/>
-                    <h5 class="mt">Flat Pack Heritage</h5>
+                    <h5 className="mt">Flat Pack Heritage</h5>
                     <h6>TOTAL SALES: 1388</h6>
-                    <button class="btn btn-small btn-theme04">FULL REPORT</button>
+                    <button className="btn btn-small btn-theme04">FULL REPORT</button>
                   </div>
                 </div>
               
               
-                <div class="col-lg-4 col-md-4 col-sm-4 mb">
-                  <div class="content-panel pn">
+                <div className="col-lg-4 col-md-4 col-sm-4 mb">
+                  <div className="content-panel pn">
                     <div id="profile-02">
-                      <div class="user">
-                        <img alt="" src="img/friends/fr-06.jpg" class="img-circle" width="80"/>
+                      <div className="user">
+                        <img alt="" src="img/friends/fr-06.jpg" className="img-circle" width="80"/>
                         <h4>DJ SHERMAN</h4>
                       </div>
                     </div>
-                    <div class="pr2-social centered">
-                      <a href="/"><i class="fa fa-twitter"></i></a>
-                      <a href="/"><i class="fa fa-facebook"></i></a>
-                      <a href="/"><i class="fa fa-dribbble"></i></a>
+                    <div className="pr2-social centered">
+                      <a href="/"><i className="fa fa-twitter"></i></a>
+                      <a href="/"><i className="fa fa-facebook"></i></a>
+                      <a href="/"><i className="fa fa-dribbble"></i></a>
                     </div>
                   </div>
                 
                 </div>
               
-                <div class="col-md-4 col-sm-4 mb">
-                  <div class="green-panel pn">
-                    <div class="green-header">
+                <div className="col-md-4 col-sm-4 mb">
+                  <div className="green-panel pn">
+                    <div className="green-header">
                       <h5>DISK SPACE</h5>
                     </div>
                     <canvas id="serverstatus03" height="120" width="120"></canvas>
@@ -282,9 +234,9 @@ export default function Home() {
           
           
             
-            <div class="col-lg-3 ds">
+            <div className="col-lg-3 ds">
             
-              <div class="donut-main">
+              <div className="donut-main">
                 <h4>COMPLETED ACTIONS & PROGRESS</h4>
                 <canvas id="newchart" height="130" width="130"></canvas>
                 {/* <script>
@@ -301,27 +253,27 @@ export default function Home() {
                 </script> */}
               </div>
             
-              <div class="panel terques-chart">
-                <div class="panel-body">
-                  <div class="chart">
-                    <div class="centered">
+              <div className="panel terques-chart">
+                <div className="panel-body">
+                  <div className="chart">
+                    <div className="centered">
                       <span>TODAY EARNINGS</span>
                       <strong>$ 890,00 | 15%</strong>
                     </div>
                     <br/>
-                    <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="/fff" data-spot-color="/fff" data-fill-color="" data-highlight-line-color="/fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,564,455]"></div>
+                    <div className="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="/fff" data-spot-color="/fff" data-fill-color="" data-highlight-line-color="/fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,564,455]"></div>
                   </div>
                 </div>
               </div>
             
             
-              <h4 class="centered mt">RECENT ACTIVITY</h4>
+              <h4 className="centered mt">RECENT ACTIVITY</h4>
             
-              <div class="desc">
-                <div class="thumb">
-                  <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              <div className="desc">
+                <div className="thumb">
+                  <span className="badge bg-theme"><i className="fa fa-clock-o"></i></span>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <muted>Just Now</muted>
                     <br/>
@@ -330,11 +282,11 @@ export default function Home() {
                 </div>
               </div>
             
-              <div class="desc">
-                <div class="thumb">
-                  <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              <div className="desc">
+                <div className="thumb">
+                  <span className="badge bg-theme"><i className="fa fa-clock-o"></i></span>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <muted>2 Minutes Ago</muted>
                     <br/>
@@ -343,11 +295,11 @@ export default function Home() {
                 </div>
               </div>
             
-              <div class="desc">
-                <div class="thumb">
-                  <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              <div className="desc">
+                <div className="thumb">
+                  <span className="badge bg-theme"><i className="fa fa-clock-o"></i></span>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <muted>3 Hours Ago</muted>
                     <br/>
@@ -356,11 +308,11 @@ export default function Home() {
                 </div>
               </div>
             
-              <div class="desc">
-                <div class="thumb">
-                  <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+              <div className="desc">
+                <div className="thumb">
+                  <span className="badge bg-theme"><i className="fa fa-clock-o"></i></span>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <muted>7 Hours Ago</muted>
                     <br/>
@@ -369,13 +321,13 @@ export default function Home() {
                 </div>
               </div>
             
-              <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
+              <h4 className="centered mt">TEAM MEMBERS ONLINE</h4>
             
-              <div class="desc">
-                <div class="thumb">
-                  <img alt="" class="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align=""/>
+              <div className="desc">
+                <div className="thumb">
+                  <img alt="" className="img-circle" src="img/ui-divya.jpg" width="35px" height="35px" align=""/>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <a href="/">DIVYA MANIAN</a><br/>
                     <muted>Available</muted>
@@ -383,11 +335,11 @@ export default function Home() {
                 </div>
               </div>
             
-              <div class="desc">
-                <div class="thumb">
-                  <img alt="" class="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align=""/>
+              <div className="desc">
+                <div className="thumb">
+                  <img alt="" className="img-circle" src="img/ui-sherman.jpg" width="35px" height="35px" align=""/>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <a href="/">DJ SHERMAN</a><br/>
                     <muted>I am Busy</muted>
@@ -395,11 +347,11 @@ export default function Home() {
                 </div>
               </div>
             
-              <div class="desc">
-                <div class="thumb">
-                  <img alt="" class="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align=""/>
+              <div className="desc">
+                <div className="thumb">
+                  <img alt="" className="img-circle" src="img/ui-danro.jpg" width="35px" height="35px" align=""/>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <a href="/">DAN ROGERS</a><br/>
                     <muted>Available</muted>
@@ -407,11 +359,11 @@ export default function Home() {
                 </div>
               </div>
             
-              <div class="desc">
-                <div class="thumb">
-                  <img alt="" class="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align=""/>
+              <div className="desc">
+                <div className="thumb">
+                  <img alt="" className="img-circle" src="img/ui-zac.jpg" width="35px" height="35px" align=""/>
                 </div>
-                <div class="details">
+                <div className="details">
                   <p>
                     <a href="/">Zac Sniders</a><br/>
                     <muted>Available</muted>
@@ -419,13 +371,13 @@ export default function Home() {
                 </div>
               </div>
             
-              <div id="calendar" class="mb">
-                <div class="panel green-panel no-margin">
-                  <div class="panel-body">
-                    <div id="date-popover" class="popover top" style={{cursor: "pointer", disadding: "block", marginLeft: "33%", marginTop: "-50px", width: "175px"}}>
-                      <div class="arrow"></div>
-                      <h3 class="popover-title" style={{disadding: "none"}}>Heading</h3>
-                      <div id="date-popover-content" class="popover-content"></div>
+              <div id="calendar" className="mb">
+                <div className="panel green-panel no-margin">
+                  <div className="panel-body">
+                    <div id="date-popover" className="popover top" style={{cursor: "pointer", disadding: "block", marginLeft: "33%", marginTop: "-50px", width: "175px"}}>
+                      <div className="arrow"></div>
+                      <h3 className="popover-title" style={{disadding: "none"}}>Heading</h3>
+                      <div id="date-popover-content" className="popover-content"></div>
                     </div>
                     <div id="my-calendar"></div>
                   </div>

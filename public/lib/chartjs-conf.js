@@ -1,10 +1,4 @@
-import { Chart } from "react-chartjs-2";
-// this was imported by me
-
-
-
-
-
+// import Chart from 'chart.js/auto';
 
 var Script = function () {
 
