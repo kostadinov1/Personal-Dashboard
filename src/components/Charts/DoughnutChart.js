@@ -1,24 +1,24 @@
-import { Bar } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import Chart from 'chart.js/auto';
 
-export default function BarChart() {
+export default function DoughnutChart() {
     return (
-                
-        <Bar
+        
+        <Doughnut id="serverstatus2"
             data={{
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                // labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
                 datasets: [
                     {
                         label: '# of votes',
-                        data: [9, 5, 3, 5, 2, 3, 3],
+                        data: [12, 5, 3, 5, 2, 3, 3],
                         backgroundColor: ['red',],
                     },
                 ],
                 
             }}
-            height={50}
-            width={100}
+            height={200}
+            width={200}
             options={{ maintainAspectRation: false, }}
-            />
+        />
     )
 }

@@ -1,4 +1,3 @@
-import { Bar } from "react-chartjs-2";
 import BarChart from "../Charts/BarChart";
 
 export default function Home() {
@@ -25,7 +24,11 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-9 main-chart">
                 
-              {BarChart()}
+              <div className="border-head">
+                <h3>USER VISITS</h3>
+              </div>
+
+                {BarChart()}
             
               <div className="row mt">
               
@@ -35,6 +38,7 @@ export default function Home() {
                       <h5>SERVER LOAD</h5>
                     </div>
                     <canvas id="serverstatus01" height="120" width="120"></canvas>
+
 
                     <div className="row">
                       <div className="col-sm-6 col-xs-6 goleft">

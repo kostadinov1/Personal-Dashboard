@@ -2,17 +2,17 @@
 
 export default function Footer() {
     return ( 
-        <footer class="site-footer">
-        <div class="text-center">
+        <footer className="site-footer">
+        <div className="text-center">
           <p>
             &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
           </p>
-          <div class="credits">
+          <div className="credits">
 
             Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
           </div>
-          <a href="index.html/" class="go-top">
-            <i class="fa fa-angle-up"></i>
+          <a href="index.html/" className="go-top">
+            <i className="fa fa-angle-up"></i>
             </a>
         </div>
       </footer>

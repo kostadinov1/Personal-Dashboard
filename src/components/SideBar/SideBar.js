@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function SideBar() {
@@ -9,23 +10,18 @@ export default function SideBar() {
             <p class="centered"><a href="profile.html"><img alt="" src="img/ui-sam.jpg" class="img-circle" width="80" /></a></p>
             <h5 class="centered">Sam Soffes</h5>
             <li class="mt">
-              <a class="active" href="index.html">
+              <Link class="active" to="index.html">
                 <i class="fa fa-dashboard"></i>
                 <span>Dashboard</span>
-                </a>
+                </Link>
             </li>
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class="fa fa-desktop"></i>
-                <span>UI Elements</span>
-                </a>
-              <ul class="sub">
-                <li><a href="general.html">General</a></li>
-                <li><a href="buttons.html">Buttons</a></li>
-                <li><a href="panels.html">Panels</a></li>
-                <li><a href="font_awesome.html">Font Awesome</a></li>
-              </ul>
+            <li>
+              <Link to="/">
+                <i class="fa fa-calendar"></i>
+                <span>Calendar</span>
+                </Link>
             </li>
+
             <li class="sub-menu">
               <a href="javascript:;">
                 <i class="fa fa-cogs"></i>
@@ -70,17 +66,7 @@ export default function SideBar() {
                 <li><a href="contactform.html">Contact Form</a></li>
               </ul>
             </li>
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class="fa fa-th"></i>
-                <span>Data Tables</span>
-                </a>
-              <ul class="sub">
-                <li><a href="basic_table.html">Basic Table</a></li>
-                <li><a href="responsive_table.html">Responsive Table</a></li>
-                <li><a href="advanced_table.html">Advanced Table</a></li>
-              </ul>
-            </li>
+
             <li>
               <a href="inbox.html">
                 <i class="fa fa-envelope"></i>
@@ -100,16 +86,7 @@ export default function SideBar() {
                 <li><a href="xchart.html">xChart</a></li>
               </ul>
             </li>
-            <li class="sub-menu">
-              <a href="javascript:;">
-                <i class="fa fa-comments-o"></i>
-                <span>Chat Room</span>
-                </a>
-              <ul class="sub">
-                <li><a href="lobby.html">Lobby</a></li>
-                <li><a href="chat_room.html"> Chat Room</a></li>
-              </ul>
-            </li>
+
             <li>
               <a href="google_maps.html">
                 <i class="fa fa-map-marker"></i>
